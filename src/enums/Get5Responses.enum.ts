@@ -8,6 +8,9 @@ export enum Get5Responses {
   // Success
   SUCCESS_LOADED_MATCH_CONFIG = "Loaded match config.",
   SUCCESS_MATCH_ENDED = "An admin force ended the match.",
+  SUCCESS_PLAYER_ADDED = "Successfully added player",
+  SUCCESS_PLAYER_REMOVED = "Successfully removed player",
+  SUCCESS_FORCEREADY = "An admin has force-readied all teams",
   
 
   // Default
