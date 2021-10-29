@@ -1,0 +1,25 @@
+{
+  "name": "get5rcon-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p .",
+    "start": "node ./lib/index.js",
+    "start:watch": "tsc-watch --onSuccess 'npm run start'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rcon-srcds": "^2.0.1"
+  },
+  "devDependencies": {
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.4.4"
+  }
+}

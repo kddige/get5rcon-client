@@ -1,0 +1,17 @@
+export enum Get5ClientCommands {
+  GET5_LOADMATCH = "get5_loadmatch",
+  GET5_LOADBACKUP = "get5_loadbackup",
+  GET5_LOADTEAM = "get5_loadteam",
+  GET5_LOADMATCH_URL = "get5_loadmatch_url",
+  GET5_ENDMATCH = "get5_endmatch",
+  GET5_CREATEMATCH = "get5_creatematch",
+  GET5_SCRIM = "get5_scrim",
+  GET5_ADDPLAYER = "get5_addplayer",
+  GET5_REMOVEPLAYER = "get5_removeplayer",
+  GET5_ADDKICKEDPLAYER = "get5_addkickedplayer",
+  GET5_REMOVEKICKEDPLAYER = "get5_removekickedplayer",
+  GET5_FORCEREADY = "get5_forceready",
+  GET5_DUMPSTATS = "get5_dumpstats",
+  GET5_STATUS = "get5_status",
+  GET5_LISTBACKUPS = "get5_listbackups",
+}
