@@ -24,7 +24,7 @@ export default interface Get5ClientInterface extends Get5ClientCommandsInterface
 
   createCommand(command: Get5Commands, args: string): string;
 
-  executeCommand<T>(command: string, expectedResponse: Get5Responses): Promise<Get5Response<T>>;
+  executeCommand<T>(command: string, expectedResponse: Get5Responses, isJson?: boolean): Promise<Get5Response<T>>;
 
   get isAutneticated(): boolean;
 

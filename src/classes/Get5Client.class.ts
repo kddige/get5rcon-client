@@ -75,17 +75,26 @@ export class Get5Client implements Get5ClientInterface {
         return `${command} ${args}`;
     }
 
-    async executeCommand<T>(command: string, expectedResponse: Get5Responses): Promise<Get5Response<T>> {
+    async executeCommand<T>(command: string, expectedResponse: Get5Responses, isJson = false): Promise<Get5Response<T>> {
         if (!this.isAutneticated) {
             return Promise.reject(new Error("Not autneticated"));
         }
         const resp = await this.server.execute(command).then(resp => resp.toString());
-        const respJson = JSON.parse(resp) as T;
-        const respObj: Get5Response<T> = {
-            data: respJson,
+
+
+        if (isJson) {
+            return {
+                data: JSON.parse(resp) as T,
+                isSuccess: true
+            };
+        }
+
+
+        const respObj = {
+            data: (resp as unknown as T),
             isSuccess: resp.includes(expectedResponse)
         };
-        return respObj
+        return respObj;
     }
 
     /**
