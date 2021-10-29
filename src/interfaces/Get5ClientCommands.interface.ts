@@ -1,4 +1,4 @@
-import { Get5Response } from "../types";
+import { Get5Response, Get5Status } from "../types";
 
 interface Get5ClientCommandsInterface {
     get5_loadmatch(path: string): Promise<Get5Response<string>>;
@@ -14,7 +14,7 @@ interface Get5ClientCommandsInterface {
     get5_removekickedplayer(player: string): Promise<boolean>;
     get5_forceready(): Promise<boolean>;
     get5_dumpstats(): Promise<boolean>;
-    get5_status(): Promise<boolean>;
+    get5_status(): Promise<Get5Response<Get5Status>>;
     get5_listbackups(): Promise<boolean>;
 }
 

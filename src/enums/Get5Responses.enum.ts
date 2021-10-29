@@ -8,4 +8,8 @@ export enum Get5Responses {
   // Success
   SUCCESS_LOADED_MATCH_CONFIG = "[ Get5 ] Loaded match config.",
   SUCCESS_MATCH_ENDED = "[ Get5 ] An admin force ended the match.",
+  
+
+  // Default
+  DEFAULT_UNKNOWN = "",
 }

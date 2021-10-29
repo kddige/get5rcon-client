@@ -1,7 +1,7 @@
 import RCON from "rcon-srcds";
 import { Get5Commands, Get5Responses } from "../enums";
 import { Get5ClientInterface } from "../interfaces";
-import { Get5ClientOptions, Get5Response } from "../types";
+import { Get5ClientOptions, Get5Response, Get5Status } from "../types";
 
 
 export class Get5Client implements Get5ClientInterface {
@@ -62,8 +62,9 @@ export class Get5Client implements Get5ClientInterface {
     async get5_dumpstats(): Promise<boolean> {
         throw new Error("Method not implemented.");
     }
-    async get5_status(): Promise<boolean> {
-        throw new Error("Method not implemented.");
+    async get5_status(): Promise<Get5Response<Get5Status>> {
+        const command = this.createCommand(Get5Commands.GET5_STATUS, "");
+        return await this.executeCommand<Get5Status>(command, Get5Responses.DEFAULT_UNKNOWN, true);
     }
     async get5_listbackups(): Promise<boolean> {
         throw new Error("Method not implemented.");
