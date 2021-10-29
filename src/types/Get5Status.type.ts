@@ -1,13 +1,13 @@
 type Get5Status = {
-    matchid: string;
     gamestate: number;
     gamestate_string: string;
-    loaded_config_file: string;
     plugin_version: string;
-    map_number: number;
-    team1: Team1;
-    team2: Team2;
     paused: boolean;
+    matchid?: string;
+    loaded_config_file?: string;
+    map_number?: number;
+    team1?: Team1;
+    team2?: Team2;
 }
 
 type Team1 = {
