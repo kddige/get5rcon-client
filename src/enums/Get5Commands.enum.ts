@@ -1,4 +1,4 @@
-export enum Get5ClientCommands {
+export enum Get5Commands {
   GET5_LOADMATCH = "get5_loadmatch",
   GET5_LOADBACKUP = "get5_loadbackup",
   GET5_LOADTEAM = "get5_loadteam",
